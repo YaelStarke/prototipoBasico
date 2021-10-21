@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+html, body{
+	padding:0;
+	margin: 0;
+	max-width:100%;
+	overflow-x:hidden;
+	box-sizing: border-box;
+	background-color: rgb(253,253,150);
+	font-family: 'Poppins', sans-serif;
+
+}
+a{
+	text-decoration: none;
+	color:white;
+}
+
+.logo{
+	width:100%;
+	height:100%;
+	display:block;
+	text-align:center;
+}
+.logo img{
+	width:100%;
+	height:30%;
+}
+.imagenFiestas img{ 
+	width:100%;
+	height:50vh;
+	object-fit:cover;
+}
+
+.titulo{
+	width: 100%;
+	background-color:rgb(255,150,0);
+}
+.titulo h1{
+	text-align: center;
+	color: white;
+}
+
+/*menu-----------*/
+#buttonMenu{
+	display:none;
+}
+label img{
+	background-color:rgb(255,153,0,0.8);
+	border:solid white;
+	display:none;
+	height:43px;
+	width:43px;
+	padding:10px;
+	position:sticky;
+	top:0;
+}
+.menu{
+	width:100%;
+	background-color:rgb(255,153,0,0.8);
+	position:sticky;
+	top:43px;
+	z-index:4;
+}
+
+.menu ul{
+	width:100%;
+	margin:0;
+	padding:0;
+	list-style:none;
+	display:flex;
+	justify-content:flex-end;
+}
+
+.menu li a{
+	display:block;
+	padding:10px;
+	margin:10px;
+	border-radius: 10px;
+	border-bottom:solid 2px white;
+}
+
+.menu li:hover{
+	background-color:rgb(160,0,0,0.9); 
+}
+
+
+.menu li a img{
+	border-radius:50%;
+}
+
+/*fresco y congeladdos-----------*/
+.contenedorAlfa{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+}
+
+.contenedor{
+	display: flex;
+	width:80%;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	margin:auto;
+}
+.carta{
+	width: 300px;
+	height:380px;
+	padding:2rem 1rem;
+	position:relative;
+	display: flex;
+	justify-content: flex-end;
+	background-color:rgb(255,153,0);
+	margin:1rem;
+}
+
+.carta:before {
+	content:"";
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display:block;
+	background:linear-gradient(rgb(160,0,0,0.9), rgb(255,153,0));
+	z-index:2;
+	opacity:0;
+	transition:1s all;
+}
+
+.carta:hover:before{
+	opacity:1
+}
+
+.carta img{
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color:rgb(255,153,0) ;
+	position:absolute;
+	object-fit: cover;
+}
+.carta .descripcion{
+	width:100%;
+	display:block;
+	align-items: center;
+	text-align: center;
+	color:white;
+	line-height:2rem;
+	font-size:1.5rem;
+
+}
+.carta:hover .descripcion{
+	position:relative;
+	z-index:3;
+	opacity:1;
+	transform: translateY(15px);
+	transition:1s all;
+
+}
+
+/*CARRUSEL---------------------*/
+.contenedorCarrusel{
+	width:100%;
+	height:90%;
+	display: block;
+	position:relative;
+	margin:auto;
+}
+h3 {
+  color: rgb(0, 0, 0);
+}
+
+video{
+	width:100%;
+	height:100%;
+	display:block;
+
+}
+
+.slider-wrap {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 300px;
+  cursor: grab;
+  margin-top:30px;
+
+}
+
+.slider {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.slider-inner {
+
+  position: absolute;
+  display: flex;
+  justify-content:space-around;
+  top: 0;
+  left: 0;
+  width: 1200px;
+  height: 100%;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 98%;
+  top: 1%;
+  margin:0px 10px;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prog-bar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color:rgb(240, 9, 9,0.8);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slider {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/*PARALLAX SANIDAD---------------------*/
+.contenedorParallax{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin-top: 350px;
+}
+.parallaxSanidad {
+	/*background: fixed no-repeat 50% 50%;
+	background-size:cover;*/
+	width:100%
+	height:100vh;
+	display:flex;
+	flex-flow:row;
+	justify-content:space-around;
+	flex-wrap:wrap;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+#parallaxSanidad1{
+	/*background-image:url(../img/maderaFondo.jpg);*/
+	height:100%;
+	width:100%;
+
+}
+.sanidadItem{
+	display:flex;
+	flex-flow:row;
+	justify-content: space-around;
+	flex-wrap:wrap;
+	align-items: center;
+	padding:2em;
+
+}
+
+.sanidadItem img{
+	height:150px;
+	width:150px;
+	background-color:rgb(255,255,255,0.3);
+	padding:15px;
+	border-radius:50%;
+
+}
+
+.sanidadItem p{
+	background-color:rgb(255,153,0);
+	box-shadow: 0px 8px 32px rgb(0,0,0,0.6);
+	border-radius:20px; 
+	font-size:1.5rem;
+	text-align:center;
+	margin:1em;
+	padding:1em;
+	border-radius:0px 10px 0px 10px;
+}
+
+/*MEDIA QUERY--------------------------*/
+
+@media only screen and (max-width: 768px){
+
+	label img{
+		display:block;
+		position:sticky;
+		top:0px;
+	}
+	.menu{
+		width:100%;
+		background-color:rgb(255,153,0,0.8);
+		position:sticky;
+		top:43px;
+		z-index:4;
+}
+
+	.menu ul{
+		width:100%;
+		position:absolute;
+		background-color:rgb(255,153,0,0.8);
+		flex-direction:column;
+		margin-left:-100%;
+		transition:1s;
+	}
+	#buttonMenu:checked ~ .menu ul{
+		margin:0px;
+	}
+	.menu li{
+		text-align: center;
+	}
+
+	.carta{
+	width: 280px;
+	height:280px;
+	padding:2rem 1rem;
+	position:relative;
+	display: flex;
+	justify-content: flex-end;
+	background-color:rgb(255,153,0);
+	margin:1rem;
+}
+
+@media only screen and (max-width: 488px){
+	label img{
+		display:block;
+		position:sticky;
+		top:0px;
+	}
+	.menu{
+		width:100%;
+		background-color:rgb(255,153,0,0.8);
+		position:sticky;
+		top:43px;
+		z-index:4;
+}
+
+	.menu ul{
+		width:100%;
+		position:absolute;
+		background-color:rgb(255,153,0,0.8);
+		flex-direction:column;
+		margin-left:-100%;
+		transition:1s;
+	}
+	#buttonMenu:checked ~ .menu ul{
+		margin:0px;
+	}
+	.menu li{
+		text-align: center;
+	}
+	.carta{
+	width: 250px;
+	height:250px;
+	padding:2rem 1rem;
+	position:relative;
+	display: flex;
+	justify-content: flex-end;
+	background-color:rgb(255,153,0);
+	margin:1rem;
+}
+
+
+
+
